@@ -1,7 +1,7 @@
 <h1 style="text-align: center; border-bottom: 1px dashed">G-Limited. (Employee Attrition)</h1>
 
 ## About Dataset
-The data was gotten from a friend, so I honestly don't know the genesis of this data, but upon research I saw a very similar dataset on <a href="#">Kaggle</a> so I would reference that. It is a fictional dataset designed by IBM data scientists for the sole purpose of learning.
+The data was gotten from a friend, so I honestly don't know the genesis of this data, but upon research I saw a very similar dataset on Kaggle<a href="https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset"> IBM HR Analytics Employee Attrition & Performance</a> so I would reference that. It is a fictional dataset designed by IBM data scientists for the sole purpose of learning.
 
 ## Introduction.
 G-Limited is a fictional company that wanted to understand the factors that lead to employee attrition in their company, employing the expertise of an analyst G-Limited wants to explore important questions that could potentially help to derive insight from the data to help them make the best decision to retain employees.
