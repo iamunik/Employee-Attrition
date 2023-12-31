@@ -28,7 +28,7 @@ I employed the following rules;
 After cleaning with Python and extracting the data, I took the data to PowerBi where I did proper Analysis on the data, designed a simple report and came out with insights that answers our guiding questions.
 
 <a href="https://www.novypro.com/project/employee-attrition-dashboard-4"><img src=images/attr.png style="width: 70%; height:60%"></a><br>
-<a href="https://www.novypro.com/project/employee-attrition-dashboard-4"><img src=images/attr.png style="width: 70%; height:60%">Click to visit the dashboard.</a>
+<a href="https://www.novypro.com/project/employee-attrition-dashboard-4">Click to visit the dashboard.</a>
 
 
 ## Guiding questions
