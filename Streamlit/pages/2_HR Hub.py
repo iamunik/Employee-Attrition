@@ -54,7 +54,7 @@ button_clicked = st.button("Search")
 
 data_select = data2.query("EmployeeNumber == @selected")
 
-st.table(data_select.set_index("EmployeeNumber")
+st.table(data_select.set_index("EmployeeNumber"))
 
 col_1, col_2, col_3 = st.columns(3)
 
