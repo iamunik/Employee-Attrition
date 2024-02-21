@@ -27,7 +27,8 @@ data = df[['EmployeeNumber', 'Age', 'BusinessTravel', 'DailyRate', 'Department',
            'YearsInCurrentRole', 'YearsSinceLastPromotion', 'YearsWithCurrManager']]
 
 # Cleaned data
-data2 = cleaned(data.copy)
+a = data.copy
+data2 = cleaned(a)
 
 a = model.predict(data2.loc[:, data2.columns[1:]])
 data['Employee_Leaving'] = a
