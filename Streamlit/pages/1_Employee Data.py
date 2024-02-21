@@ -28,7 +28,7 @@ data = df[['EmployeeNumber', 'Age', 'BusinessTravel', 'DailyRate', 'Department',
 
 # Cleaned data
 a = data.copy
-st.table(a.head())
+st.table(data.head())
 data2 = cleaned(a)
 
 a = model.predict(data2.loc[:, data2.columns[1:]])
