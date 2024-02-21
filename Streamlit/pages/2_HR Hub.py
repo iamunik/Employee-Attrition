@@ -28,17 +28,10 @@ data = df[['EmployeeNumber', 'Age', 'BusinessTravel', 'DailyRate', 'Department',
 
 # ML cleaned data
 data2 = cleaned(data)
-# st.table(data2.head())
-# data2 = data2[['Age', 'BusinessTravel', 'DailyRate', 'Department', 'DistanceFromHome', 'Education',
-#                'EducationField', 'EnvironmentSatisfaction', 'Gender', 'HourlyRate', 'JobInvolvement', 'JobLevel',
-#                'JobRole', 'JobSatisfaction', 'MaritalStatus', 'MonthlyIncome', 'MonthlyRate', 'NumCompaniesWorked',
-#                'OverTime', 'PercentSalaryHike', 'PerformanceRating', 'RelationshipSatisfaction', 'StandardHours',
-#                'StockOptionLevel', 'TotalWorkingYears', 'TrainingTimesLastYear', 'WorkLifeBalance', 'YearsAtCompany',
-#                'YearsInCurrentRole', 'YearsSinceLastPromotion', 'YearsWithCurrManager']]
 
-a = model.predict(data2.loc[:, data.columns[1:]])
+prediction = model.predict(data2.loc[:, data.columns[1:]])
 
-data['Employee_Leaving'] = a
+data['Employee_Leaving'] = prediction
 data['Employee_Leaving'] = data['Employee_Leaving'].map({0: "No", 1: "Yes"})
 
 # Streamlit app starts here
@@ -61,7 +54,7 @@ button_clicked = st.button("Search")
 
 data_select = data2.query("EmployeeNumber == @selected")
 
-st.table(data_select)
+st.table(data_select.set_index("EmployeeNumber")
 
 col_1, col_2, col_3 = st.columns(3)
 
@@ -129,12 +122,12 @@ with col_3:
     0 - No
     1 - Yes""")
 
-
-editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
-
-a = editor
-st.text(a)
-b = np.array(a)
-predictions = model.predict(b)
-st.write(predictions)
+try:
+           editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
+           # st.text(a)
+           arra_y = np.array(editor)
+           predictions = model.predict(arra_y)
+           st.write(predictions)
+except ValueError:
+           st.warning("Search for employee number")
 
