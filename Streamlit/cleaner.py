@@ -1,7 +1,7 @@
 def cleaned(data_cleaned):
     data_cleaned['BusinessTravel'] = data_cleaned['BusinessTravel'].map({'Travel_Rarely': 0,
                                                                          'Travel_Frequently': 1,
-                                                                         'Non-Travel': 2}).astype('int64')
+                                                                         'Non-Travel': 2})
     
     data_cleaned['Department'] = data_cleaned['Department'].map({'Sales': 0,
                                                                  'Research & Development': 1,
