@@ -38,5 +38,5 @@ a = model.predict(data2.loc[:, data.columns[1:]])
 data['Employee_Leaving'] = a
 data['Employee_Leaving'] = data['Employee_Leaving'].map({0: "No", 1: "Yes"})
 
-# st.dataframe(data, use_container_width=True)
-st.table(data)
+st.dataframe(data, use_container_width=True)
+# st.table(data)
