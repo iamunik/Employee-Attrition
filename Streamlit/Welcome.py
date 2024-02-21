@@ -2,27 +2,13 @@ import streamlit as st
 import os
 from PIL import Image
 
-st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 st.title("G-Limited Human Resource Hub")
 st.subheader("Enhancing Retention Strategies")
 
 # Directories
 parent_directory = os.path.dirname(os.path.dirname(__file__))
-assets_dir = os.path.join(parent_directory, 'Machine Learning', 'assets')
-# hr_png_path = os.path.join(assets_dir, 'hr.jpeg')
-hr_png_path = "Streamlit/assets/hr.jpeg"
+assets_dir = os.path.join(parent_directory, 'Streamlit', 'assets')
+hr_png_path = os.path.join(assets_dir, 'hr.jpeg')
 
 st.image(Image.open(hr_png_path), width=500)
 
