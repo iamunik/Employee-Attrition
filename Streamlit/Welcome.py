@@ -21,7 +21,8 @@ st.subheader("Enhancing Retention Strategies")
 # Directories
 parent_directory = os.path.dirname(os.path.dirname(__file__))
 assets_dir = os.path.join(parent_directory, 'Machine Learning', 'assets')
-hr_png_path = os.path.join(assets_dir, 'hr.jpeg')
+# hr_png_path = os.path.join(assets_dir, 'hr.jpeg')
+hr_png_path = "Streamlit/assets/hr.jpeg"
 
 st.image(Image.open(hr_png_path), width=500)
 
