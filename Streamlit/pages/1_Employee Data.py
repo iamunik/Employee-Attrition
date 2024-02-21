@@ -1,10 +1,11 @@
+from cleaner import cleaned
 import streamlit as st
 import pandas as pd
 import joblib
 import os
-from cleaner import cleaned
 
 st.header("Employee Data")
+st.subheader("G-Limited employees")
 
 # Directories
 parent_directory = os.path.dirname(os.path.dirname(__file__))
@@ -27,16 +28,9 @@ data = df[['EmployeeNumber', 'Age', 'BusinessTravel', 'DailyRate', 'Department',
 
 # Cleaned data
 data2 = cleaned(data)
-# data2 = data2[['Age', 'BusinessTravel', 'DailyRate', 'Department', 'DistanceFromHome', 'Education',
-#                'EducationField', 'EnvironmentSatisfaction', 'Gender', 'HourlyRate', 'JobInvolvement', 'JobLevel',
-#                'JobRole', 'JobSatisfaction', 'MaritalStatus', 'MonthlyIncome', 'MonthlyRate', 'NumCompaniesWorked',
-#                'OverTime', 'PercentSalaryHike', 'PerformanceRating', 'RelationshipSatisfaction', 'StandardHours',
-#                'StockOptionLevel', 'TotalWorkingYears', 'TrainingTimesLastYear', 'WorkLifeBalance', 'YearsAtCompany',
-#                'YearsInCurrentRole', 'YearsSinceLastPromotion', 'YearsWithCurrManager']]
 
 a = model.predict(data2.loc[:, data.columns[1:]])
 data['Employee_Leaving'] = a
 data['Employee_Leaving'] = data['Employee_Leaving'].map({0: "No", 1: "Yes"})
 
-st.dataframe(data, use_container_width=True)
-# st.table(data)
+st.dataframe(data.set_index('EmployeeNumber'), use_container_width=True)
