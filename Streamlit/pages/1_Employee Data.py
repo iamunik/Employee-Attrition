@@ -29,7 +29,7 @@ data = df[['EmployeeNumber', 'Age', 'BusinessTravel', 'DailyRate', 'Department',
 # Cleaned data
 data2 = cleaned(data)
 
-a = model.predict(data2.loc[:, data.columns[1:]])
+a = model.predict(data2.loc[:, data2.columns[1:]])
 data['Employee_Leaving'] = a
 data['Employee_Leaving'] = data['Employee_Leaving'].map({0: "No", 1: "Yes"})
 
