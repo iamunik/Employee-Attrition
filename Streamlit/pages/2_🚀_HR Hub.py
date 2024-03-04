@@ -133,7 +133,7 @@ with col_3:
 
 st.divider()
 st.subheader("Editable DataFrame")
-st.text("Here you can edit each columns to see how it affects the employee")
+st.text("Here you can edit each columns to see how it affects the employee. Double click to edit.")
 
 try:
     editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
