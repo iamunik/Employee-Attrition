@@ -133,11 +133,18 @@ try:
     editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
     arra_y = np.array(editor)
     predictions = model.predict_proba(arra_y)
-    if predictions[0, 0]*100 < predictions[0, 1]*100:
-        st.warning(f"There is a {round(predictions[0, 0]*100)} chance that Employee Number '{round(selected)}' leaves the company")
-    else:
-        st.success(f"There is a {round(predictions[0, 1]*100)} chance that Employee Number '{round(selected)}' stays with the company")
-    # st.write(predictions)
+    # if predictions[0, 0] * 100 > predictions[0, 1] * 100:
+    #     print(predictions[0, 0] * 100)
+    #     print(predictions)
+    #     # st.warning(f"There is a {round(predictions[0, 0]*100)} chance that Employee Number '{round(selected)}' leaves the company")
+    # elif predictions[0, 1] * 100 > predictions[0, 0] * 100:
+    #     print(predictions[0, 1] * 100)
+    #     print(predictions)
+    #     # st.success(f"There is a {round(predictions[0, 1]*100)} chance that Employee Number '{round(selected)}' stays with the company")
+    # else:
+    #     print(predictions[0, 1] * 100)
+    #     print(predictions)
+    st.write(predictions)
 except ValueError:
     st.warning("Search for employee number")
 
