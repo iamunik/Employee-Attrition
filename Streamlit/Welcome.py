@@ -35,7 +35,7 @@ employee retention and resignation factors. The following are detailed functions
 - <b>Predictive Modeling:</b> Machine learning algorithms analyze historical data to forecast the likelihood of employee
 turnover.
 - <b>Feature Manipulation:</b> HR personnel can adjust various features such as compensation, job satisfaction, and
-training opportunities to observe their influence on turnover predictions.
+stock opportunities to observe their influence on turnover predictions.
 - <b>Scenario Planning:</b> Users can simulate different scenarios to understand the potential outcomes of specific 
 interventions or policy changes.
 - <b>Data Ingestion:</b> Employee data, including demographics, performance metrics, and job-related variables, is
