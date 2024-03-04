@@ -128,6 +128,9 @@ with col_3:
     0 - No
     1 - Yes""")
 
+st.subheader("Editable DataFrame")
+st.text("Here you can edit each columns to see how it affects the employee")
+
 try:
     editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
     arra_y = np.array(editor)
