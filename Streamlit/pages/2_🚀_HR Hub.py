@@ -8,7 +8,7 @@ import os
 
 st.set_page_config(
     page_title="HR Hub",
-    page_icon=" ",
+    page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded")
 

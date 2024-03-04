@@ -7,7 +7,7 @@ import os
 
 st.set_page_config(
     page_title="Employee Data",
-    page_icon=" ",
+    page_icon="🗃️",
     layout="wide",
     initial_sidebar_state="expanded")
 
@@ -35,12 +35,14 @@ data = df[['EmployeeNumber', 'Age', 'BusinessTravel', 'DailyRate', 'Department',
 
 # Cleaned data
 a = data.copy()
-# st.table(data.head())
+
+# Applying the cleaned function
 data2 = cleaned(a)
 
+# Prediction
 a = model.predict(data2.loc[:, data2.columns[1:]])
 data['Employee_Leaving'] = a
 data['Employee_Leaving'] = data['Employee_Leaving'].map({0: "No", 1: "Yes"})
 
+# Dataframe
 st.dataframe(data.set_index('EmployeeNumber'), use_container_width=True)
-# st.table(data.set_index('EmployeeNumber'))
