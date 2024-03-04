@@ -133,6 +133,10 @@ try:
     editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
     arra_y = np.array(editor)
     predictions = model.predict_proba(arra_y)
+    if prediction[0]*100 > predictions[1]*100:
+        st.warning(f"There is a {prediction[0]*100} chance that Employee Number {selected} leaves the company")
+    else:
+        st.success(f"There is a {prediction[1]*100} chance that Employee Number {selected} stays with the company")
     st.write(predictions)
 except ValueError:
     st.warning("Search for employee number")
