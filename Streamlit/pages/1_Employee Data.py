@@ -4,6 +4,13 @@ import pandas as pd
 import joblib
 import os
 
+
+st.set_page_config(
+    page_title="Employee Data",
+    page_icon=" ",
+    layout="wide",
+    initial_sidebar_state="expanded")
+
 st.header("Employee Data")
 st.subheader("G-Limited employees")
 
@@ -36,3 +43,4 @@ data['Employee_Leaving'] = a
 data['Employee_Leaving'] = data['Employee_Leaving'].map({0: "No", 1: "Yes"})
 
 st.dataframe(data.set_index('EmployeeNumber'), use_container_width=True)
+# st.table(data.set_index('EmployeeNumber'))
