@@ -136,7 +136,7 @@ try:
     if predictions[0, 0]*100 > predictions[0, 1]*100:
         st.warning(f"There is a {predictions[0, 0]*100} chance that Employee Number {selected} leaves the company")
     else:
-        st.success(f"There is a {predictions[0, 1]*100} chance that Employee Number {selected} stays with the company")
+        st.success(f"There is a {round(predictions[0, 1]*100)} chance that Employee Number {selected} stays with the company")
     # st.write(predictions)
 except ValueError:
     st.warning("Search for employee number")
