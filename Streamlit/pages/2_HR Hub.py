@@ -132,7 +132,7 @@ with col_3:
 try:
     editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
     arra_y = np.array(editor)
-    predictions = model.predict(arra_y)
+    predictions = model.predict_proba(arra_y)
     st.write(predictions)
 except ValueError:
     st.warning("Search for employee number")
