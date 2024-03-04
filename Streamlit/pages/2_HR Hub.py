@@ -1,9 +1,16 @@
+from cleaner import cleaned
 import streamlit as st
 import pandas as pd
-import joblib
 import numpy as np
+import joblib
 import os
-from cleaner import cleaned
+
+
+st.set_page_config(
+    page_title="HR Hub",
+    page_icon=" ",
+    layout="wide",
+    initial_sidebar_state="expanded")
 
 
 # Directories
@@ -123,11 +130,10 @@ with col_3:
     1 - Yes""")
 
 try:
-           editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
-           # st.text(a)
-           arra_y = np.array(editor)
-           predictions = model.predict(arra_y)
-           st.write(predictions)
+    editor = st.data_editor(data_select.loc[:, data.columns[1:-1]])
+    arra_y = np.array(editor)
+    predictions = model.predict(arra_y)
+    st.write(predictions)
 except ValueError:
-           st.warning("Search for employee number")
+    st.warning("Search for employee number")
 
