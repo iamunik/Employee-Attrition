@@ -1,6 +1,14 @@
 import streamlit as st
-import os
 from PIL import Image
+import os
+
+
+st.set_page_config(
+    page_title="Human Resource Space",
+    page_icon=" ",
+    layout="wide",
+    initial_sidebar_state="expanded")
+
 
 st.title("G-Limited Human Resource Hub")
 st.subheader("Enhancing Retention Strategies")
@@ -8,9 +16,9 @@ st.subheader("Enhancing Retention Strategies")
 # Directories
 parent_directory = os.path.dirname(os.path.dirname(__file__))
 assets_dir = os.path.join(parent_directory, 'Streamlit', 'assets')
-hr_png_path = os.path.join(assets_dir, 'hr.jpeg')
+hr_jpeg_path = os.path.join(assets_dir, 'hr.jpeg')
 
-st.image(Image.open(hr_png_path), width=500)
+st.image(Image.open(hr_jpeg_path), width=500)
 
 st.markdown("""
 Employee turnover is a significant challenge for organizations, impacting productivity, morale, and overall performance.
@@ -32,6 +40,8 @@ training opportunities to observe their influence on turnover predictions.
 interventions or policy changes.
 - <b>Data Ingestion:</b> Employee data, including demographics, performance metrics, and job-related variables, is
 collected from internal HR systems.
+- <b>Chart Section:</b> The chart section shows the HR personnel a quick insight into the organisations data, 
+understanding the distribution of staffs along their departments as well as basic demographics.
 
 ## Benefits:
 <b>Implementing the HR resource web application offers several benefits for organizations:</b>
