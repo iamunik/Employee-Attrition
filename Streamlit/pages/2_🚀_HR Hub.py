@@ -128,6 +128,7 @@ with col_3:
     0 - No
     1 - Yes""")
 
+st.divider()
 st.subheader("Editable DataFrame")
 st.text("Here you can edit each columns to see how it affects the employee")
 
