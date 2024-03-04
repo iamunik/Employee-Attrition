@@ -63,8 +63,8 @@ data_select = data2.query("EmployeeNumber == @selected")
 
 st.table(data_select.set_index("EmployeeNumber"))
 
+st.subheader("Legend")
 st.divider()
-st.write("Legend")
 
 col_1, col_2, col_3 = st.columns(3)
 
