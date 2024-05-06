@@ -8,12 +8,12 @@ G-Limited is a fictional company that wanted to understand the factors that lead
 
 ## PROCESS
 ### Data Extraction.
-As a firm beliver in the gospel of Python, I was given a database file (.db) and was told to extract the data from it using Python. The data extraction was fairly straight forward because the database was created using SQLite an inbuilt Python follow come database. After importing sqlite3 I perform the data extraction.
+As a firm beliver in the gospel of Python, I was given a database file (.db) and was told to extract the data from it using Python. The data extraction was fairly straight forward because the database was created using SQLite an inbuilt Python database. After importing sqlite3, I then performed the data extraction.
 
 <img src=images/attr_extraction.png style="width: 50%; height:60%"><br>
 
 ### Data cleaning
-After extracting the data I moved to cleaning the data using Jupyter notebook as that is more suited to clean the data, the ipynb runs using Python. (Read again!!!)
+After extracting the data I moved to cleaning the data using Jupyter notebook as that is more suited to clean the data.
 
 I employed the following rules;
 1. <b>Data Explorarion:</b> This is where I look through the distribution and see the data types of the columns in the dataset, check for missing values and ensure everything is okay.
